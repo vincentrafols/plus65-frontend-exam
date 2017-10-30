@@ -16,9 +16,7 @@ Start the development server with this command:
 npm run start
 ```
 
-Compile
+Notes
 ---
  
-```
-npm run compile
-```
+Need to use `npm run start` to run at `localhost:3000` which is the url whitelisted for google auth login
