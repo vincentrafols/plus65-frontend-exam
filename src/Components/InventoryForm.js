@@ -42,14 +42,42 @@ class InventoryForm extends React.Component {
     render() {
         return (
             <form className="component-part component-part--form-list">
-                <input className="component-part__input" type="text" onChange={this.handleChange} id="name" value={this.state.name} />
-                <input className="component-part__input" type="number" min="1" max="999" onChange={this.handleChange} id="price" value={this.state.price} />
-                <select className="component-part__select" onChange={this.handleChange} id="isSoldOut" value={this.state.isSoldOut}>
+                <input
+                    className="component-part__input"
+                    type="text"
+                    onChange={this.handleChange}
+                    id="name" value={this.state.name}
+                    placeholder="Product Name" />
+                <input
+                    className="component-part__input"
+                    type="number"
+                    min="1" max="999"
+                    onChange={this.handleChange}
+                    id="price"
+                    value={this.state.price}
+                    placeholder="Price" />
+                <select
+                    className="component-part__select"
+                    onChange={this.handleChange}
+                    id="isSoldOut"
+                    value={this.state.isSoldOut}>
                     <option value={false}>Fresh!</option>
                     <option value={true}>Sold Out!</option>
                 </select>
-                <textarea type="text" className="component-part__input component-part__textarea" onChange={this.handleChange} id="desc" value={this.state.desc} ></textarea>
-                <input className="component-part__input component-part__url" type="text" onChange={this.handleChange} id="imgUrl" value={this.state.imgUrl} />
+                <textarea
+                    className="component-part__input component-part__textarea"
+                    type="text"
+                    onChange={this.handleChange}
+                    id="desc" value={this.state.desc}
+                    placeholder="Item Description">
+                </textarea>
+                <input
+                    className="component-part__input component-part__url"
+                    type="text"
+                    onChange={this.handleChange}
+                    id="imgUrl"
+                    value={this.state.imgUrl}
+                    placeholder="Image Url"/>
                 <button
                     disabled={
                         _isEmpty(this.state.name) ||

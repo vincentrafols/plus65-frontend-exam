@@ -11,10 +11,11 @@ function getInventory(collection) {
             {
                 imgUrl: product.imgUrl,
                 name: product.name,
-                price: product.price,
+                price: parseInt(product.price),
                 desc: product.desc,
                 isSoldOut: product.isSoldOut,
-                id: product.id
+                id: product.id,
+                qty: 1
             }
         );
     });

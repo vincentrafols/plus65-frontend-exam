@@ -1,4 +1,5 @@
 import React from 'react';
+import _isArray from 'lodash/isArray';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Orders from './Orders';
@@ -13,6 +14,9 @@ class OrderList extends React.Component {
 
     getTotalPrice(orders) {
         let total = 0;
+        if(!_isArray(orders)){
+            return parseInt(orders.price);
+        }
         orders.map((order) => {
             total += parseInt(order.price);
         });
